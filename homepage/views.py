@@ -1,5 +1,9 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import generics
+from .models import PersonalInfo
+from .serializers import PersonalInfoSerializer
+from resume.permissions import IsAdminOrReadOnly
 
-def home(request):
-  return HttpResponse("Hello, World!")
+class PersonalInfoList(generics.ListAPIView):
+  queryset = PersonalInfo.objects.all()
+  serializer_class = PersonalInfoSerializer
+  permission_classes = [IsAdminOrReadOnly]
