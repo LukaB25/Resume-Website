@@ -1,7 +1,7 @@
 ---
 name: 'USER STORY: '
 about: Resume website user story template
-title: ''
+title: 'USER STORY:'
 labels: ''
 assignees: ''
 
