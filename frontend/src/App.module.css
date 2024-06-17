@@ -1,3 +1,25 @@
 .App {
-  text-align: center;
+  font-family: "Playfair Display", serif;
+  min-height: 100vh;
+}
+
+.PaddingTop {
+  padding-top: 5rem;
+}
+
+a {
+  color: var(--white--color) !important;
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+}
+
+a i {
+  font-size: 2.6rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem var(--viridian--color) !important;
+}
+
+a:hover i {
+  color: var(--aquamarine--color) !important;
+  transition: color 0.5s ease-in-out;
 }

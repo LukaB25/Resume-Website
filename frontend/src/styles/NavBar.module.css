@@ -1,4 +1,5 @@
 .NavBar {
+  font-family: "Playwrite FR Moderne", cursive;
   font-size: 2rem;
   width: 5rem;
   height: 100vh;
@@ -7,6 +8,7 @@
   transition: all 0.5s ease-in-out;
   background-color: var(--black--color--opacity--80) !important;
   cursor: pointer;
+  position: fixed;
 }
 
 .Name {
@@ -41,20 +43,25 @@
   margin: 0;
 }
 
-.NavLinks a {
+.NavLink {
   color: var(--white--color) !important;
   text-decoration: none;
   color: inherit;
   align-items: center;
+  padding: 1rem 0;
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+.NavLink:hover {
+  text-decoration: none;
 }
 
-.NavLinks a i {
-  font-size: 2.6rem;
-  text-shadow: 0.2rem 0.2rem 0.2rem var(--viridian--color) !important;
-}
-
-.NavBarExpanded .NavLinks a i{
-  font-size: 2rem;
+.NavSocialLinks {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  margin: 1rem 0;
 }
 
 @keyframes bounce {
@@ -69,17 +76,10 @@
   }
 }
 
-.NavLinks a:hover i {
-  color: var(--aquamarine--color) !important;
-  transition: color 0.5s ease-in-out;
+.NavLink:hover i {
   animation: bounce 1s infinite;
 }
 
-.NavSocialLinks {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 0;
-  margin: 1rem 0;
-  margin-left: 0.3rem;
+.Active i {
+  color: var(--yellow--color) !important;
 }
