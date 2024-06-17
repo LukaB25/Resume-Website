@@ -10,9 +10,22 @@ import Collapse from 'react-bootstrap/Collapse';
 
 import styles from '../styles/NavBar.module.css';
 
+import { usePersonalInfo } from '../contexts/PersonalInfoContext';
 
 function NavBar() {
   const [expanded, setExpanded] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
+  const personalInfo = usePersonalInfo().data?.[0];
+  console.log(personalInfo)
+
+  const timer = setTimeout(() => {
+    setLoaded(true);
+  }, 1000);
+
+  if (loaded) {
+    return () => clearTimeout(timer);
+  }
 
   const toggleNavbar = () => setExpanded(!expanded);
   const closeNavbar = () => setExpanded(false);
@@ -68,26 +81,46 @@ function NavBar() {
                 <i className="fas fa-envelope fa-fw" /> {expanded && 'Contact'}
             </NavLink>
             <div className={styles.NavSocialLinks}>
-              <NavLink
-                to="/" target='_blank'
+              {personalInfo?.github_url !== null ? (<Nav.Link
+                href={`${personalInfo?.github_url}`}
+                target='_blank'
                 className={styles.NavLink}>
                   <i className="fab fa-github fa-fw" /> {expanded && 'GitHub'}
-              </NavLink>
-              <NavLink
-                to="/"
+              </Nav.Link>) : null}
+              {personalInfo?.linkedin_url !== null ? (<Nav.Link
+                href={`${personalInfo?.linkedin_url}`}
+                target='_blank'
                 className={styles.NavLink}>
                   <i className="fab fa-linkedin fa-fw" /> {expanded && 'LinkedIn'}
-              </NavLink>
-              <NavLink
-                to="/"
+              </Nav.Link>) : null}
+              {personalInfo?.facebook_url !== null ? (<Nav.Link
+                href={`${personalInfo?.facebook_url}`}
+                target='_blank'
                 className={styles.NavLink}>
                   <i className="fab fa-facebook fa-fw" /> {expanded && 'Facebook'}
-              </NavLink>
-              <NavLink
-                to="/"
+              </Nav.Link>) : null}
+              {personalInfo?.instagram_url !== null ? (<Nav.Link
+                href={`${personalInfo?.instagram_url}`}
+                target='_blank'
                 className={styles.NavLink}>
                   <i className="fab fa-instagram fa-fw" /> {expanded && 'Instagram'}
-              </NavLink>
+              </Nav.Link>) : null}
+              {loaded ? (
+                <>
+                  {personalInfo?.youtube_url !== null ? (<Nav.Link
+                    href={`${personalInfo?.youtube_url}`}
+                    target='_blank'
+                    className={styles.NavLink}>
+                      <i className="fab fa-youtube fa-fw" /> {expanded && 'YouTube'}
+                  </Nav.Link>) : null}
+                  {personalInfo?.twitter_url !== null ? (<Nav.Link
+                    href={`${personalInfo?.twitter_url}`}
+                    target='_blank'
+                    className={styles.NavLink}>
+                      <i className="fab fa-twitter fa-fw" /> {expanded && 'Twitter'}
+                  </Nav.Link>) : null}
+                </>
+              ) : clearTimeout(timer)}
             </div>
           </Nav>
         </Container>

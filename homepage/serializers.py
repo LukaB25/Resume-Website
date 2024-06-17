@@ -7,6 +7,7 @@ class PersonalInfoSerializer(serializers.ModelSerializer):
     fields = (
       'id',
       'name',
+      'title',
       'email',
       'phone',
       'address',

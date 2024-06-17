@@ -9,6 +9,7 @@
   background-color: var(--black--color--opacity--80) !important;
   cursor: pointer;
   position: fixed;
+  z-index: 2;
 }
 
 .Name {
@@ -62,6 +63,7 @@
   position: absolute;
   bottom: 0;
   margin: 1rem 0;
+  margin-left: -0.5rem;
 }
 
 @keyframes bounce {
