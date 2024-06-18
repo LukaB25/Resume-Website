@@ -11,14 +11,14 @@ function HeroSection() {
   // console.log(personalInfo)
   return (
     <div>
-      <Row xs={1} md={2}>
-        <Col className='m-auto' md={6}>
+      <Row className={styles.HeroSmallScreen} xs={1} md={2}>
+        <Col className={`align-self-center`} xs={{ order: 2 }} md={{ order: 1 }}>
           <Container className={styles.HeroContainer}>
-            <h1 className="display-1">{personalInfo?.name}</h1>
-            <p className="lead">{personalInfo?.title}</p>
+            <h1>{personalInfo?.name}</h1>
+            <p>{personalInfo?.title}</p>
           </Container>
         </Col>
-        <Col  md={6}>
+        <Col xs={{ order: 1 }} md={{ order: 2 }}>
           <Container className={styles.HeroImageContainer}>
             <img
               src={personalInfo?.image}

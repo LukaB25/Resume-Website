@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
@@ -11,28 +10,44 @@ import Collapse from 'react-bootstrap/Collapse';
 import styles from '../styles/NavBar.module.css';
 
 import { usePersonalInfo } from '../contexts/PersonalInfoContext';
+import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
 
 function NavBar() {
-  const [expanded, setExpanded] = useState(false);
+  const { expanded, setExpanded, ref } = useClickOutsideToggle();
   const [loaded, setLoaded] = useState(false);
 
   const personalInfo = usePersonalInfo().data?.[0];
   console.log(personalInfo)
 
-  const timer = setTimeout(() => {
-    setLoaded(true);
-  }, 1000);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 1000);
 
-  if (loaded) {
     return () => clearTimeout(timer);
-  }
+  }, []);
 
-  const toggleNavbar = () => setExpanded(!expanded);
+  const toggleNavbar = (e) => {
+    if (!expanded && e.target.tagName !== 'A' && e.target.tagName !== 'I'){
+      setExpanded(!expanded);
+    }
+    else if (expanded) {
+      setExpanded(false);
+    
+    }
+  }
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text);
+    alert(`${text} copied to clipboard`);
+  };
+
   const closeNavbar = () => setExpanded(false);
   return (
     <Navbar
       bg="light"
       fixed="left"
+      ref={ref}
+      expanded={expanded}
       onClick={toggleNavbar}
       className={`${styles.NavBar}
         ${expanded && styles.NavBarExpanded}`}>
@@ -81,6 +96,25 @@ function NavBar() {
                 <i className="fas fa-envelope fa-fw" /> {expanded && 'Contact'}
             </NavLink>
             <div className={styles.NavSocialLinks}>
+              {expanded && <div className={styles.NavPersonalInfo}>
+                <p>{personalInfo?.address}</p>
+                {personalInfo?.phone !== null ? (
+                  <Nav.Link
+                    onClick={() => copyToClipboard(personalInfo?.phone)}
+                      className={styles.NavLink}
+                    >
+                    {personalInfo?.phone}
+                  </Nav.Link>
+                ) : null}
+                {personalInfo?.email !== null ? (
+                  <Nav.Link
+                    onClick={() => copyToClipboard(personalInfo?.email)}
+                      className={styles.NavLink}
+                    >
+                    {personalInfo?.email}
+                  </Nav.Link>
+                ) : null}
+              </div>}
               {personalInfo?.github_url !== null ? (<Nav.Link
                 href={`${personalInfo?.github_url}`}
                 target='_blank'
@@ -105,7 +139,7 @@ function NavBar() {
                 className={styles.NavLink}>
                   <i className="fab fa-instagram fa-fw" /> {expanded && 'Instagram'}
               </Nav.Link>) : null}
-              {loaded ? (
+              {loaded && (
                 <>
                   {personalInfo?.youtube_url !== null ? (<Nav.Link
                     href={`${personalInfo?.youtube_url}`}
@@ -120,7 +154,7 @@ function NavBar() {
                       <i className="fab fa-twitter fa-fw" /> {expanded && 'Twitter'}
                   </Nav.Link>) : null}
                 </>
-              ) : clearTimeout(timer)}
+              )}
             </div>
           </Nav>
         </Container>

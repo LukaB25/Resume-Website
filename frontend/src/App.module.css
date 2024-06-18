@@ -23,3 +23,9 @@ a:hover i {
   color: var(--aquamarine--color) !important;
   transition: color 0.5s ease-in-out;
 }
+
+@media screen and (max-width: 575px){
+  .PaddingTop {
+    padding-top: 0;
+  }
+}
