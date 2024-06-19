@@ -24,9 +24,6 @@
 }
 
 @media screen and (max-width: 640px){
-  .SummarySmallScreen {
-    margin-left: 3.5rem;
-  }
   .SummaryParagraph {
     font-size: 1.4rem;
   }
@@ -35,5 +32,8 @@
 @media screen and (max-width: 400px){
   .SummaryParagraph {
     font-size: 1.2rem;
+  }
+  .SummaryContainer {
+    padding: 2rem;
   }
 }

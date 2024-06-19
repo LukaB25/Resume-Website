@@ -1,0 +1,93 @@
+.EducationContainer {
+  background-color: var(--black--color--opacity--80);
+  text-align: justify;
+  margin-top: 5rem;
+  padding: 5rem;
+  z-index: 1;
+  box-shadow: inset 0 0 1rem var(--medium--blue--color);
+}
+
+.Title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.SpecialDisplay {
+  display: flex;
+}
+
+.School {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+.SchoolLink {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--light--blue--color) !important;
+}
+
+.Date {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-left: auto;
+  margin-top: 1.2rem;
+}
+
+.Description {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 640px){
+  .Title {
+    font-size: 2rem;
+  }
+
+  .School {
+    font-size: 1.4rem;
+  }
+
+  .SchoolLink {
+    font-size: 1.4rem;
+  }
+
+  .Date {
+    font-size: 1.2rem;
+  }
+
+  .Description {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .Title {
+    font-size: 1.6rem;
+  }
+
+  .SpecialDisplay {
+    display: block;
+    text-align: center;
+  }
+
+  .Description {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .EducationContainer {
+    padding: 2rem;
+  }
+
+  .Description {
+    font-size: 1rem;
+  }
+}

@@ -7,6 +7,13 @@
   padding-top: 5rem;
 }
 
+.MainContainer {
+  display: block;
+  position: relative;
+  text-align: justify;
+  align-content: center;
+}
+
 a {
   color: var(--white--color) !important;
   text-decoration: none;
@@ -22,6 +29,12 @@ a i {
 a:hover i {
   color: var(--aquamarine--color) !important;
   transition: color 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 640px){
+  .MainContainer {
+    margin-left: 3.5rem;
+  }
 }
 
 @media screen and (max-width: 575px){

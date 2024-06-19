@@ -6,6 +6,8 @@ import Col from 'react-bootstrap/esm/Col';
 import { usePersonalInfo } from '../../contexts/PersonalInfoContext';
 
 import styles from '../../styles/Homepage.module.css';
+import appStyles from '../../App.module.css';
+
 function Homepage() {
   const personalInfo = usePersonalInfo().data?.[0];
 
@@ -16,7 +18,7 @@ function Homepage() {
     )
   });
   return (
-      <Row className={`${styles.SummaryContainer} ${styles.SummarySmallScreen}`}>
+      <Row className={`${styles.SummaryContainer} ${appStyles.MainContainer}`}>
           {paragraphs}
       </Row>
   )
