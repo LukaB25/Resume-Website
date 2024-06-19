@@ -6,13 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { PersonalInfoProvider } from './contexts/PersonalInfoContext';
 import { EducationInfoProvider } from './contexts/EducationInfoContext';
+import { CourseInfoProvider } from './contexts/CourseInfoContext';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <PersonalInfoProvider>
         <EducationInfoProvider>
-          <App />
+          <CourseInfoProvider>
+            <App />
+          </CourseInfoProvider>
         </EducationInfoProvider>
       </PersonalInfoProvider>
     </Router>
