@@ -7,6 +7,7 @@ class Education(models.Model):
   """
   school = models.CharField(max_length=200)
   title = models.CharField(max_length=150)
+  location = models.CharField(max_length=150)
   description = models.TextField()
   school_url = models.URLField(blank=True, null=True)
   start_date = models.DateField()

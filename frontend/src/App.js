@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Homepage from './pages/homepage/Homepage';
 import HeroSection from './components/HeroSection';
 import Education from './pages/education/Education';
+import Experience from './pages/experience/Experience';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Switch>
           <Route exact path='/' render={() => <Homepage />} />
           <Route exact path='/education' render={() => <Education />} />
-          <Route exact path='/experience' render={() => <h1>Experience</h1>} />
+          <Route exact path='/experience' render={() => <Experience />} />
           <Route exact path='/skills' render={() => <h1>Skills</h1>} />
           <Route exact path='/projects' render={() => <h1>Projects</h1>} />
           <Route exact path='/contact' render={() => <h1>Contact</h1>} />

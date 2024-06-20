@@ -9,6 +9,7 @@ class ExperienceSerializer(serializers.ModelSerializer):
       'id',
       'company_name',
       'job_title',
+      'location',
       'description',
       'achievements',
       'skills_gained',

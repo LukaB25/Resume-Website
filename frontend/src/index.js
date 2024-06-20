@@ -7,6 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { PersonalInfoProvider } from './contexts/PersonalInfoContext';
 import { EducationInfoProvider } from './contexts/EducationInfoContext';
 import { CourseInfoProvider } from './contexts/CourseInfoContext';
+import { ExperienceInfoProvider } from './contexts/ExperienceInfoContext';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,7 +15,9 @@ ReactDOM.render(
       <PersonalInfoProvider>
         <EducationInfoProvider>
           <CourseInfoProvider>
-            <App />
+            <ExperienceInfoProvider>
+              <App />
+            </ExperienceInfoProvider>
           </CourseInfoProvider>
         </EducationInfoProvider>
       </PersonalInfoProvider>

@@ -1,4 +1,4 @@
-.EducationContainer {
+.ExperienceContainer {
   background-color: var(--black--color--opacity--80);
   text-align: justify;
   margin-top: 5rem;
@@ -26,23 +26,11 @@
   display: flex;
 }
 
-.School {
+.Company {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.5;
   margin: 1rem 0;
-}
-
-.SchoolLink {
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--light--blue--color) !important;
-}
-
-.SchoolLink:hover {
-  color: var(--aquamarine--color) !important;
-  text-decoration: underline;
 }
 
 .Date {
@@ -58,6 +46,30 @@
   line-height: 1.5;
 }
 
+.SkillSets {
+  text-decoration: wavy underline var(--light--blue--color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.Skill, .Achievement {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.Divider {
+  margin: 0 0.5rem;
+  font-size: 1.6rem;
+  color: var(--light--blue--color);
+}
+
+@media screen and (max-width: 767px){
+  .Date {
+    font-size: 1.2rem;
+  }
+}
+
 @media screen and (max-width: 640px){
   .Title {
     font-size: 2rem;
@@ -67,16 +79,8 @@
     font-size: 1.6rem;
   }
 
-  .School {
+  .Company {
     font-size: 1.4rem;
-  }
-
-  .SchoolLink {
-    font-size: 1.4rem;
-  }
-
-  .Date {
-    font-size: 1.2rem;
   }
 
   .Description {
@@ -104,7 +108,7 @@
 }
 
 @media screen and (max-width: 400px){
-  .EducationContainer {
+  .ExperienceContainer {
     padding: 2rem;
   }
 

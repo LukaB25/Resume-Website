@@ -8,6 +8,7 @@ class EducationSerializer(serializers.ModelSerializer):
       'id',
       'school',
       'title',
+      'location',
       'description',
       'school_url',
       'start_date',

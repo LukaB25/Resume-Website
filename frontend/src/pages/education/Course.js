@@ -11,7 +11,6 @@ import appStyles from '../../App.module.css';
 
 function Course() {
   const courseInfo = useCourseInfo().data;
-  console.log(courseInfo);
 
   return(
     (courseInfo && courseInfo.length > 0) ? (
