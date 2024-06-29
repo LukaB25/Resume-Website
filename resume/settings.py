@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'homepage',
     'education',
     'experience',
+    'skill',
 ]
 
 REST_FRAMEWORK = {
