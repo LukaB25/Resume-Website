@@ -1,1 +1,1 @@
-web: gunicorn drf_api.wsgi
+web: gunicorn resume.wsgi
