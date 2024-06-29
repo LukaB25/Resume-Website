@@ -6,9 +6,9 @@ class TechnicalSkillSerializer(serializers.ModelSerializer):
   skill_label = serializers.SerializerMethodField()
 
   def get_skill_label(self, obj):
-    if self.skill_level <=40:
+    if obj.skill_level <=40:
       return 'Beginner'
-    elif self.skill_level <=70:
+    elif obj.skill_level <=70:
       return 'Intermediate'
     else:
       return 'Advanced'

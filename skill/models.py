@@ -21,6 +21,8 @@ class TechnicalSkill(models.Model):
     validators=[MinValueValidator(0), MaxValueValidator(100)]
   )
   category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='other')
+  created_at = models.DateTimeField(auto_now_add=True)
+  updated_at = models.DateTimeField(auto_now=True)
 
   def __str__(self):
     return self.skill_name
@@ -37,6 +39,8 @@ class GeneralSkill(models.Model):
   problem solving, etc.
   """
   skill_name = models.CharField(max_length=200)
+  created_at = models.DateTimeField(auto_now_add=True)
+  updated_at = models.DateTimeField(auto_now=True)
 
   def __str__(self):
     return self.skill_name
