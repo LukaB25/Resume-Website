@@ -21,7 +21,7 @@ function Education() {
           <h1>Education</h1>
         </div>
         {educationInfo && educationInfo.map((education, index) => (
-          <Col xs={12} key={index} className={styles.EducationContainer}>
+          <Col xs={12} key={index} className={appStyles.ContentContainer}>
             <Container className={styles.EducationContent}>
               <h2 className={styles.Title}>{education.title}</h2>
                 <h3 className={styles.Location}>{education.location}</h3>

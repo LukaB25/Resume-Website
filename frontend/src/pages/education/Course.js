@@ -19,7 +19,7 @@ function Course() {
           <h1>Courses</h1>
         </div>
         {courseInfo && courseInfo.map((course, index) => (
-          <Col xs={12} key={index} className={styles.EducationContainer}>
+          <Col xs={12} key={index} className={appStyles.ContentContainer}>
             <Container className={styles.EducationContent}>
               <h2 className={styles.Title}>{course.title}</h2>
               <div className={styles.SpecialDisplay}>

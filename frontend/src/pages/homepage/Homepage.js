@@ -25,7 +25,7 @@ function Homepage() {
         <div className={appStyles.MainHeader}>
           <h1>About Me</h1>
         </div>
-        <Col className={`${styles.SummaryContainer}`}>
+        <Col className={`${appStyles.ContentContainer}`}>
           {paragraphs}
         </Col>
       </Row>

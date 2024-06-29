@@ -12,6 +12,7 @@
   position: relative;
   text-align: justify;
   align-content: center;
+  margin-bottom: 5rem;
 }
 
 .MainHeader {
@@ -24,6 +25,15 @@
   margin-top: 5rem;
   z-index: 1;
   text-decoration: underline;
+  box-shadow: inset 0 0 1rem var(--medium--blue--color);
+}
+
+.ContentContainer {
+  background-color: var(--black--color--opacity--80) !important;
+  text-align: justify;
+  margin-top: 5rem;
+  padding: 5rem;
+  z-index: 1;
   box-shadow: inset 0 0 1rem var(--medium--blue--color);
 }
 

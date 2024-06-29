@@ -8,6 +8,7 @@ import { PersonalInfoProvider } from './contexts/PersonalInfoContext';
 import { EducationInfoProvider } from './contexts/EducationInfoContext';
 import { CourseInfoProvider } from './contexts/CourseInfoContext';
 import { ExperienceInfoProvider } from './contexts/ExperienceInfoContext';
+import { SkillsProvider } from './contexts/SkillsContext';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,7 +17,9 @@ ReactDOM.render(
         <EducationInfoProvider>
           <CourseInfoProvider>
             <ExperienceInfoProvider>
-              <App />
+              <SkillsProvider>
+                <App />
+              </SkillsProvider>
             </ExperienceInfoProvider>
           </CourseInfoProvider>
         </EducationInfoProvider>

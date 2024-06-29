@@ -19,7 +19,7 @@ function Experience() {
         <h1>Work Experience</h1>
       </div>
       {experienceInfo && experienceInfo.map((experience, index) => (
-        <Col xs={12} key={index} className={styles.ExperienceContainer}>
+        <Col xs={12} key={index} className={appStyles.ContentContainer}>
         <Container className={styles.ExperienceContent}>
           <h2 className={styles.Title}>{experience.job_title}</h2>
           <h3 className={styles.Location}>{experience.location}</h3>

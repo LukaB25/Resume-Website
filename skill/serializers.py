@@ -20,6 +20,7 @@ class TechnicalSkillSerializer(serializers.ModelSerializer):
       'skill_name',
       'skill_level',
       'skill_label',
+      'category',
       'created_at',
       'updated_at'
     )
