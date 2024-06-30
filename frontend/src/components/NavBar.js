@@ -151,7 +151,7 @@ function NavBar() {
                     href={`${personalInfo?.twitter_url}`}
                     target='_blank'
                     className={styles.NavLink}>
-                      <i class="fa-brands fa-x-twitter fa-fw" /> {expanded && 'Twitter'}
+                      <i className="fa-brands fa-x-twitter fa-fw" /> {expanded && 'Twitter'}
                   </Nav.Link>) : null}
                 </>
               )}

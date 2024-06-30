@@ -14,6 +14,9 @@ function Education() {
   const educationInfo = useEducationInfo().data;
   console.log('Education', educationInfo);
 
+  if (!educationInfo) {
+    return <div className={appStyles.MainHeader}><h1>Loading...</h1></div>;
+  }
   return (
     <>
       <Row className={appStyles.MainContainer}>

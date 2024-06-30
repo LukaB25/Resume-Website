@@ -34,6 +34,11 @@ function Skills() {
     }
   }
 
+
+  if (!technicalSkills) {
+    return <div className={appStyles.MainHeader}><h1>Loading...</h1></div>;
+  }
+
   return (
     <React.Fragment>
       {technicalSkills && technicalSkills.length > 0 &&

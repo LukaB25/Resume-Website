@@ -13,7 +13,12 @@ function Experience() {
   const experienceInfo = useExperienceInfo().data;
   console.log(experienceInfo);
 
+  if (!experienceInfo) {
+    return <div className={appStyles.MainHeader}><h1>Loading...</h1></div>;
+  }
+
   return (
+    (experienceInfo && experienceInfo.length !== 0) &&
     <Row className={appStyles.MainContainer}>
       <div  className={appStyles.MainHeader}>
         <h1>Work Experience</h1>

@@ -20,14 +20,21 @@ function Homepage() {
         </Container>
     )
   });
+
+  if (!personalInfo) {
+    return <div className={appStyles.MainHeader}><h1>Loading...</h1></div>;
+  }
+
   return (
       <Row className={`${appStyles.MainContainer}`}>
         <div className={appStyles.MainHeader}>
           <h1>About Me</h1>
         </div>
+        {personalInfo && 
         <Col className={`${appStyles.ContentContainer}`}>
           {paragraphs}
         </Col>
+        }
       </Row>
   )
 }

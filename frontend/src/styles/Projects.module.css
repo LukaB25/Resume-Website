@@ -1,0 +1,144 @@
+.CaptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black--color--opacity--70);
+  padding: 2rem;
+  margin: 1.5rem 2.5rem;
+}
+
+.Title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ProjectTitleSmallScreen {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.TitleLink {
+  color: var(--light--blue--color) !important;
+}
+
+.TitleLink:hover {
+  color: var(--aquamarine--color) !important;
+  transition: color 0.5s ease-in-out;
+}
+
+.Excerpt {
+  color: var(--offwhite--color) !important;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.ProjectInfo h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.ProjectInfo h3 a {
+  color: var(--light--blue--color) !important;
+}
+
+.ProjectInfo h3 a i {
+  color: var(--offwhite--color) !important;
+}
+
+.ProjectInfo h3 a:hover {
+  color: var(--aquamarine--color) !important;
+  transition: color 0.5s ease-in-out;
+}
+
+.Description h3, .Technologies h3 {
+  margin-top: 2.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.Description span, .Technologies li {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.TechnologiesList {
+  list-style-type: none;
+}
+
+.TechnologiesList li {
+  margin-left: -2.5rem;
+}
+
+.TechnologiesList li i {
+  font-size: 1.8rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .ProjectInfo h3 {
+    font-size: 2.2rem;
+  }
+
+  .Description h3, .Technologies h3 {
+    font-size: 2rem;
+  }
+
+  .Description span, .Technologies li {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Title {
+    font-size: 1.8rem;
+  }
+
+  .Excerpt {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .ProjectInfo h3 {
+    font-size: 1.6rem;
+  }
+
+  .ProjectInfo h3 a i {
+    font-size: 1.6rem;
+  }
+
+  .Description h3, .Technologies h3 {
+    font-size: 1.4rem;
+  }
+
+  .Description span, .Technologies li {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .Title {
+    font-size: 1.8rem;
+  }
+
+  .Excerpt {
+    font-size: 1.2rem;
+  }
+
+  .ProjectInfo h3 {
+    font-size: 1.4rem;
+  }
+
+  .Description h3, .Technologies h3 {
+    font-size: 1.2rem;
+  }
+
+  .Description span, .Technologies li {
+    font-size: 1rem;
+  }
+}
