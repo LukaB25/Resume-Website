@@ -17,6 +17,12 @@ class PersonalInfo(models.Model):
     blank=True,
     null=True
   )
+  diploma_image = models.ImageField(
+    upload_to='images/',
+    blank=True,
+    null=True
+  )
+  technologies_learned = models.TextField(blank=True, null=True)
   github_url = models.URLField(blank=True, null=True)
   linkedin_url = models.URLField(blank=True, null=True)
   twitter_url = models.URLField(blank=True, null=True)

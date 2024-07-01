@@ -14,6 +14,8 @@ class PersonalInfoSerializer(serializers.ModelSerializer):
       'address',
       'summary',
       'image',
+      'diploma_image',
+      'technologies_learned',
       'github_url',
       'linkedin_url',
       'twitter_url',

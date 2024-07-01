@@ -124,22 +124,28 @@ function ProjectPage() {
             <ul className={`${styles.TechnologiesList}`}>
             {project.technologies.split(', ').map((technology, index1) => (
               <li key={index1}>
-                {technology === 'HTML' && (<i className="fa-brands fa-html5 fa-fw" />)}
-                {technology === 'CSS' && (<i className="fa-brands fa-css3-alt fa-fw" />)}
-                {technology === 'JavaScript' && (<i className="fa-brands fa-js fa-fw" />)}
-                {technology === 'Python' && (<i className="fa-brands fa-python fa-fw" />)}
-                {technology === 'React' && (<i className="fa-brands fa-react fa-fw" />)}
-                {(technology === 'Bootstrap' || technology === 'React-Bootstrap')
-                  && (<i className="fa-brands fa-bootstrap fa-fw" />)}
-                {technology !== 'HTML' &&
-                  technology !== 'CSS' &&
-                  technology !== 'JavaScript' &&
-                  technology !== 'Python' &&
-                  technology !== 'React' &&
-                  technology !== 'Bootstrap' &&
-                  technology !== 'React-Bootstrap' &&
-                  <i className="fa-solid fa-circle fa-fw" />}
-                {' '}{technology}
+              {technology === 'HTML' && (<i className="fa-brands fa-html5 fa-fw" />)}
+              {technology === 'CSS' && (<i className="fa-brands fa-css3-alt fa-fw" />)}
+              {technology === 'JavaScript' && (<i className="fa-brands fa-js fa-fw" />)}
+              {technology === 'Python' && (<i className="fa-brands fa-python fa-fw" />)}
+              {technology === 'React' && (<i className="fa-brands fa-react fa-fw" />)}
+              {(technology === 'Bootstrap' || technology === 'React Bootstrap')
+                && (<i className="fa-brands fa-bootstrap fa-fw" />)}
+              {technology === 'Git' && (<i className="fa-brands fa-git fa-fw" />)}
+              {technology === 'GitHub' && (<i className="fa-brands fa-github fa-fw" />)}
+              {technology === 'PostgreSQL' && (<i className="fa-solid fa-database fa-fw" />)}
+              {technology !== 'HTML' &&
+                technology !== 'CSS' &&
+                technology !== 'JavaScript' &&
+                technology !== 'Python' &&
+                technology !== 'React' &&
+                technology !== 'Bootstrap' &&
+                technology !== 'React Bootstrap' &&
+                technology !== 'Git' &&
+                technology !== 'GitHub' &&
+                technology !== 'PostgreSQL' &&
+                <i className="fa-solid fa-circle fa-fw" />}
+              {' '}{technology}
                   <br /> </li>
             ))}
             </ul>
@@ -151,22 +157,28 @@ function ProjectPage() {
                 <ul className={styles.TechnologiesList}>
                 {everyFirstTechnology.map((technology, index3) => (
                   <li key={index3}>
-                    {technology === 'HTML' && (<i className="fa-brands fa-html5 fa-fw" />)}
-                    {technology === 'CSS' && (<i className="fa-brands fa-css3-alt fa-fw" />)}
-                    {technology === 'JavaScript' && (<i className="fa-brands fa-js fa-fw" />)}
-                    {technology === 'Python' && (<i className="fa-brands fa-python fa-fw" />)}
-                    {technology === 'React' && (<i className="fa-brands fa-react fa-fw" />)}
-                    {(technology === 'Bootstrap' || technology === 'React-Bootstrap')
-                      && (<i className="fa-brands fa-bootstrap fa-fw" />)}
-                    {technology !== 'HTML' &&
-                      technology !== 'CSS' &&
-                      technology !== 'JavaScript' &&
-                      technology !== 'Python' &&
-                      technology !== 'React' &&
-                      technology !== 'Bootstrap' &&
-                      technology !== 'React-Bootstrap' &&
-                      <i className="fa-solid fa-circle fa-fw" />}
-                    {' '}{technology}
+                  {technology === 'HTML' && (<i className="fa-brands fa-html5 fa-fw" />)}
+                  {technology === 'CSS' && (<i className="fa-brands fa-css3-alt fa-fw" />)}
+                  {technology === 'JavaScript' && (<i className="fa-brands fa-js fa-fw" />)}
+                  {technology === 'Python' && (<i className="fa-brands fa-python fa-fw" />)}
+                  {technology === 'React' && (<i className="fa-brands fa-react fa-fw" />)}
+                  {(technology === 'Bootstrap' || technology === 'React Bootstrap')
+                    && (<i className="fa-brands fa-bootstrap fa-fw" />)}
+                  {technology === 'Git' && (<i className="fa-brands fa-git fa-fw" />)}
+                  {technology === 'GitHub' && (<i className="fa-brands fa-github fa-fw" />)}
+                  {technology === 'PostgreSQL' && (<i className="fa-solid fa-database fa-fw" />)}
+                  {technology !== 'HTML' &&
+                    technology !== 'CSS' &&
+                    technology !== 'JavaScript' &&
+                    technology !== 'Python' &&
+                    technology !== 'React' &&
+                    technology !== 'Bootstrap' &&
+                    technology !== 'React Bootstrap' &&
+                    technology !== 'Git' &&
+                    technology !== 'GitHub' &&
+                    technology !== 'PostgreSQL' &&
+                    <i className="fa-solid fa-circle fa-fw" />}
+                  {' '}{technology}
                       <br />
                   </li>
                 ))}
@@ -176,22 +188,28 @@ function ProjectPage() {
                 <ul className={styles.TechnologiesList}>
                 {everySecondTechnology.map((technology, index4) => (
                   <li key={index4}>
-                    {technology === 'HTML' && (<i className="fa-brands fa-html5 fa-fw" />)}
-                    {technology === 'CSS' && (<i className="fa-brands fa-css3-alt fa-fw" />)}
-                    {technology === 'JavaScript' && (<i className="fa-brands fa-js fa-fw" />)}
-                    {technology === 'Python' && (<i className="fa-brands fa-python fa-fw" />)}
-                    {technology === 'React' && (<i className="fa-brands fa-react fa-fw" />)}
-                    {(technology === 'Bootstrap' || technology === 'React-Bootstrap')
-                      && (<i className="fa-brands fa-bootstrap fa-fw" />)}
-                    {technology !== 'HTML' &&
-                      technology !== 'CSS' &&
-                      technology !== 'JavaScript' &&
-                      technology !== 'Python' &&
-                      technology !== 'React' &&
-                      technology !== 'Bootstrap' &&
-                      technology !== 'React-Bootstrap' &&
-                      <i className="fa-solid fa-circle fa-fw" />}
-                    {' '}{technology}
+                  {technology === 'HTML' && (<i className="fa-brands fa-html5 fa-fw" />)}
+                  {technology === 'CSS' && (<i className="fa-brands fa-css3-alt fa-fw" />)}
+                  {technology === 'JavaScript' && (<i className="fa-brands fa-js fa-fw" />)}
+                  {technology === 'Python' && (<i className="fa-brands fa-python fa-fw" />)}
+                  {technology === 'React' && (<i className="fa-brands fa-react fa-fw" />)}
+                  {(technology === 'Bootstrap' || technology === 'React Bootstrap')
+                    && (<i className="fa-brands fa-bootstrap fa-fw" />)}
+                  {technology === 'Git' && (<i className="fa-brands fa-git fa-fw" />)}
+                  {technology === 'GitHub' && (<i className="fa-brands fa-github fa-fw" />)}
+                  {technology === 'PostgreSQL' && (<i className="fa-solid fa-database fa-fw" />)}
+                  {technology !== 'HTML' &&
+                    technology !== 'CSS' &&
+                    technology !== 'JavaScript' &&
+                    technology !== 'Python' &&
+                    technology !== 'React' &&
+                    technology !== 'Bootstrap' &&
+                    technology !== 'React Bootstrap' &&
+                    technology !== 'Git' &&
+                    technology !== 'GitHub' &&
+                    technology !== 'PostgreSQL' &&
+                    <i className="fa-solid fa-circle fa-fw" />}
+                  {' '}{technology}
                       <br />
                   </li>
                 ))}

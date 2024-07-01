@@ -5,9 +5,22 @@
   margin-bottom: 20px;
 }
 
+.List {
+  list-style-type: none;
+}
+
 @media screen and (min-width: 1200px){
   .SummaryParagraph {
     font-size: 2.2rem;
+  }
+  .List {
+    font-size: 2rem !important;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .List {
+    font-size: 1.6rem;
   }
 }
 
