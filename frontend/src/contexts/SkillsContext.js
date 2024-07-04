@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import axios from 'axios';
+import { axiosReq } from "../api/axiosDefaults";
 
 export const TechnicalSkillsContext = createContext();
 export const GeneralSkillsContext = createContext();
@@ -14,7 +14,7 @@ export const SkillsProvider = ({ children }) => {
   useEffect(() => {
     const fetchTechnicalSkillsData = async () => {
       try {
-        const { data } = await axios.get('https://8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net/api/technical-skill/');
+        const { data } = await axiosReq.get('/technical-skill/');
         setTechnicalSkills(data);
       } catch (error) {
         console.log(error)
@@ -22,7 +22,7 @@ export const SkillsProvider = ({ children }) => {
     }
     const fetchGeneralSkillsData = async () => {
       try {
-        const { data } = await axios.get('https://8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net/api/general-skill/');
+        const { data } = await axiosReq.get('/general-skill/');
         setGeneralSkills(data);
       } catch (error) {
         console.log(error)

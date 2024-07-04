@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import axios from 'axios';
+import { axiosReq } from '../api/axiosDefaults'
 
 export const ProjectsContext = createContext();
 
@@ -12,7 +12,7 @@ export const ProjectsProvider = ({ children }) => {
   useEffect(() => {
     const fetchProjectsData = async () => {
       try {
-        const { data } = await axios.get('https://8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net/api/projects/');
+        const { data } = await axiosReq.get('/projects/');
         setData(data);
       } catch (error) {
         console.log(error)
@@ -24,7 +24,7 @@ export const ProjectsProvider = ({ children }) => {
 
   const fetchProjectData = async (id) => {
     try {
-      const { data } = await axios.get(`https://8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net/api/projects/${id}/`);
+      const { data } = await axiosReq.get(`/projects/${id}/`);
       setProject(data);
     } catch (error) {
       console.log(error)

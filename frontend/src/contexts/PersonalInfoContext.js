@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import axios from 'axios';
+import { axiosReq } from "../api/axiosDefaults";
 
 export const PersonalInfoContext = createContext();
 
@@ -11,7 +11,7 @@ export const PersonalInfoProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get('https://8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net/api/personal-info/');
+        const { data } = await axiosReq.get('/personal-info/');
         setData(data);
       } catch (error) {
         console.error(error);

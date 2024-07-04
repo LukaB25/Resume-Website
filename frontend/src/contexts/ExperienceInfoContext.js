@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import axios from 'axios';
+import { axiosReq } from "../api/axiosDefaults";
 
 export const ExperienceInfoContext = createContext();
 
@@ -11,7 +11,7 @@ export const ExperienceInfoProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get('https://8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net/api/experience/');
+        const { data } = await axiosReq.get('/experience/');
         setData(data);
       } catch (error) {
         console.log(error)

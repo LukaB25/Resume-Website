@@ -10,6 +10,7 @@ import styles from '../../styles/Contact.module.css';
 
 import { usePersonalInfo } from '../../contexts/PersonalInfoContext';
 import axios from 'axios';
+import { axiosRes } from '../../api/axiosDefaults';
 
 function ContactForm() {
   const [formData, setFormData] = React.useState({
@@ -51,12 +52,12 @@ function ContactForm() {
     event.preventDefault();
     try {
       console.log(formData)
-      await axios.post('https://8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net/api/contact/', {
+      await axiosRes.post('contact/', {
         name: formData?.name,
         email: formData?.email,
         subject: formData?.subject,
         message: formData?.message,
-      })
+      });
       await axios.post('https://hooks.zapier.com/hooks/catch/19352901/23mq8rv/',
         new URLSearchParams({
           name: formData.name,
@@ -68,6 +69,7 @@ function ContactForm() {
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
           },
+          withCredentials: false,
         }
       );
       toast.success(`Hi ${formData.name}, your message has been sent.`)
