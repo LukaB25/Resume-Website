@@ -1,7 +1,7 @@
 .HeroContainer {
   background: var(--black--color--opacity--70);
   display: block;
-  height: 20rem;
+  height: 25rem;
   width: 90%;
   position: relative;
   z-index: 1;
@@ -19,6 +19,38 @@
 font-size: 2rem;
 font-weight: 700;
 padding-top: 1rem;
+}
+
+.HeroButtons {
+  margin-top: 1.5rem;
+}
+
+.DownloadButton, .ContactLink {
+  font-family: 'Playwrite FR Moderne', cursive;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  margin: 1rem 0.5rem;
+  border: 2px inset var(--medium--blue--color);
+  border-radius: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.DownloadButton:hover, .ContactLink:hover {
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 0.5px 0.5px 1px var(--light--blue--color),
+              0 10px 20px var(--medium--blue--color),
+              0 4px 5px 0px var(--dark--blue--color);
+  animation: wave 0.8s ease forwards;
+}
+
+.DownloadButton {
+  background: linear-gradient(45deg, var(--light--blue--color),var(--medium--blue--color), var(--dark--blue--color));
+}
+
+.ContactLink {
+  background-color: var(--black--color);
 }
 
 .HeroImageContainer img {
@@ -60,5 +92,21 @@ padding-top: 1rem;
   font-size: 1.8rem;
   font-weight: 700;
   padding-top: 1rem;
+  }
+}
+
+@keyframes wave {
+  30% {
+    opacity: 1;
+    transform: translateY(4px) translateX(0) rotate(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3px) translateX(0) rotate(0);
+    color: var(--light--blue--color);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) rotate(0);
   }
 }

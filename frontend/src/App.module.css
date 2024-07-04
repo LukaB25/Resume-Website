@@ -49,7 +49,7 @@ a i {
   text-shadow: 0.2rem 0.2rem 0.2rem var(--viridian--color) !important;
 }
 
-a:hover i {
+a:hover, a:hover i {
   color: var(--aquamarine--color) !important;
   transition: color 0.5s ease-in-out;
 }

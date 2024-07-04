@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
@@ -17,7 +18,6 @@ function NavBar() {
   const [loaded, setLoaded] = useState(false);
 
   const personalInfo = usePersonalInfo().data?.[0];
-  console.log(personalInfo)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -37,8 +37,12 @@ function NavBar() {
     }
   }
   const copyToClipboard = (text) => {
+    try {
     navigator.clipboard.writeText(text);
-    alert(`${text} copied to clipboard`);
+    toast.success(`${text} copied to clipboard`);
+    } catch (error) {
+      toast.error('Failed to copy text to clipboard')
+    }
   };
 
   const closeNavbar = () => setExpanded(false);

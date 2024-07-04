@@ -11,6 +11,7 @@ import Experience from './pages/experience/Experience';
 import Skills from './pages/skills/Skills';
 import ProjectsPage from './pages/projects/ProjectsPage';
 import ProjectPage from './pages/projects/ProjectPage';
+import ContactPage from './pages/contact/ContactPage';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           <Route exact path='/skills' render={() => <Skills />} />
           <Route exact path='/projects' render={() => <ProjectsPage />} />
           <Route exact path='/projects/:id' render={() => <ProjectPage />} />
-          <Route exact path='/contact' render={() => <h1>Contact</h1>} />
+          <Route exact path='/contact' render={() => <ContactPage />} />
           {/* <Route exact path='/' render={() => <h1>Homepage</h1>} /> */}
         </Switch>
       </Container>

@@ -12,7 +12,7 @@ export const ProjectsProvider = ({ children }) => {
   useEffect(() => {
     const fetchProjectsData = async () => {
       try {
-        const { data } = await axios.get('http://localhost:8000/api/projects/');
+        const { data } = await axios.get('https://8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net/api/projects/');
         setData(data);
       } catch (error) {
         console.log(error)
@@ -24,7 +24,7 @@ export const ProjectsProvider = ({ children }) => {
 
   const fetchProjectData = async (id) => {
     try {
-      const { data } = await axios.get(`http://localhost:8000/api/projects/${id}/`);
+      const { data } = await axios.get(`https://8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net/api/projects/${id}/`);
       setProject(data);
     } catch (error) {
       console.log(error)

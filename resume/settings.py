@@ -41,6 +41,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '.herokuapp.com',
     '127.0.0.1',
+    '8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net',
 ]
 
 
@@ -85,12 +86,20 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    os.environ.get('CLIENT_ORIGIN'),
-    os.environ.get('CLIENT_ORIGIN2'),
-    os.environ.get('CLIENT_ORIGIN3'),
+    'https://8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net',
+    'https://8080-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net',
+    'http://127.0.0.1:8000',
+    'https://lblack-resume-ff87d1364db0.herokuapp.com',
 ]
 
 CORS_ALLOW_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net',
+    'https://8080-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net',
+    'http://127.0.0.1:8000',
+    'https://lblack-resume-ff87d1364db0.herokuapp.com',
+]
 
 ROOT_URLCONF = 'resume.urls'
 

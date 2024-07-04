@@ -20,12 +20,11 @@
   font-family: "Playwrite FR Moderne", cursive;
   margin: 1rem 0;
   font-size: 2.4rem;
-
 }
 
 .NavBarExpanded {
   width: 20rem;
-  background-color: var(--dark--blue--color) !important;
+  background: linear-gradient(45deg, var(--light--blue--color),var(--medium--blue--color), var(--dark--blue--color));
   box-shadow: inset 0 0 1rem var(--medium--blue--color);
 }
 
@@ -96,7 +95,7 @@
 }
 
 .Active i {
-  color: var(--yellow--color) !important;
+  color: var(--light--viridian--color) !important;
 }
 
 .NavBar::-webkit-scrollbar {

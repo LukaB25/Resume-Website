@@ -1,0 +1,336 @@
+.ContactHeader {
+  background: linear-gradient(45deg, var(--light--blue--color),var(--medium--blue--color), var(--dark--blue--color));
+}
+
+.ContactMessage {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.ContactMessage h2 {
+  font-family: 'Playwrite FR Moderne', cursive;
+  font-size: 2.8rem;
+  background: linear-gradient(45deg, var(--light--blue--color),var(--medium--blue--color), var(--dark--blue--color));
+  margin-bottom: 2.5rem;
+}
+
+.PersonalInfo {
+  font-size: 1.6rem;
+}
+
+.PersonalInfo p {
+  margin: 0 1rem 1rem 1rem;
+}
+
+.PersonalInfo p i {
+  font-size: 2.4rem;
+  color: var(--light--blue--color)
+}
+
+.ClickableText {
+  cursor: pointer;
+}
+
+.ContactForm {
+  width: 40% ;
+}
+
+.ContactForm input, .ContactForm textarea {
+  padding: 1rem;
+  margin: 2.5rem 0;
+}
+
+.ContactForm .InputBox, .ContactForm .SelectBox {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--white--color);
+  background-color: var(--black--color--opacity--80);
+  text-shadow: 0.2rem 0.2rem 0.2rem var(--dark--viridian--color);
+  border: 0.2rem solid var(--medium--blue--color);
+  border-radius: 1.5rem;
+}
+
+.ContactForm .InputBox:focus, .ContactForm .SelectBox:focus {
+  background: linear-gradient(45deg, var(--light--blue--color),var(--medium--blue--color), var(--dark--blue--color));
+  border: 0.2rem solid var(--light--blue--color);
+  box-shadow: 0 0.5px 0.5px 1px var(--light--blue--color),
+              0 10px 20px var(--medium--blue--color),
+              0 4px 5px 0px var(--dark--blue--color);
+}
+
+.ContactForm .MessageBox {
+  text-align: justify;
+}
+
+.ContactForm .InputBox::placeholder, .ContactForm .SelectBox::placeholder {
+  color: var(--white--color);
+  text-align: center;
+}
+
+.Button {
+  background-color: var(--black--color);
+  color: var(--white--color);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+  border-radius: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  width: 10rem;
+  margin: 2.5rem 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.SendButton, .SendButton:focus, .SendButton:active {
+  border: 0.2rem solid var(--viridian--color);
+  color: var(--white--color);
+  background-color: var(--black--color);
+  box-shadow: 0 0.5px 0.5px 1px var(--light--viridian--color),
+              0 10px 20px var(--viridian--color),
+              0 4px 5px 0px var(--dark--viridian--color);
+}
+
+.SendButton:hover {
+  transform: scale(1.1);
+  background-color: var(--black--color);
+  border-color: var(--black--color);
+  box-shadow: 0 0 1px 2px var(--light--viridian--color),
+              0 15px 30px var(--viridian--color),
+              0 10px 3px -3px var(--dark--viridian--color);
+}
+
+.SendButton:active {
+  transform: scale(1);
+  background-color: var(--dark--viridian--color);
+  border-color: var(--black--color);
+  box-shadow: 0 0 1px 2px var(--light--viridian--color),
+    0 10px 3px -3px var(--dark--viridian--color);
+}
+
+.ClearButton, .ClearButton:focus, .ClearButton:active {
+  border: 0.2rem solid var(--burgundy--color);
+  color: var(--white--color);
+  background-color: var(--black--color);
+  box-shadow: 0 0.5px 0.5px 1px var(--light--burgundy--color),
+              0 10px 20px var(--burgundy--color),
+              0 4px 5px 0px var(--dark--burgundy--color);
+}
+
+.ClearButton:hover {
+  transform: scale(1.1);
+  background-color: var(--black--color);
+  border-color: var(--dark--burgundy--color);
+  box-shadow: 0 0 1px 2px var(--light--burgundy--color),
+              0 15px 30px var(--burgundy--color),
+              0 10px 3px -3px var(--dark--burgundy--color);
+}
+
+.ClearButton:active {
+  transform: scale(1);
+  background-color: var(--black--color);
+  border-color: var(--black--color);
+  box-shadow: 0 0 1px 2px var(--light--burgundy--color),
+    0 10px 3px -3px var(--dark--burgundy--color);
+}
+
+.Button .ButtonIcon {
+  margin-right: 0.75rem;
+}
+
+.SendButton .ButtonText span {
+  display: inline-block;
+  opacity: 0;
+  animation: slideDownGreen 0.8s ease forwards;
+}
+
+.SendButton:hover .ButtonText span  {
+  opacity: 1;
+  animation: waveGreen 0.5s ease forwards;
+}
+
+.SendButton:focus {
+  opacity: 1;
+  animation: waveGreen 0.5s ease forwards;
+}
+
+.ClearButton .ButtonText span {
+  display: inline-block;
+  opacity: 0;
+  animation: slideDownRed 0.8s ease forwards;
+}
+
+.ClearButton:hover .ButtonText span  {
+  opacity: 1;
+  animation: waveRed 0.5s ease forwards;
+}
+
+.ClearButton:focus {
+  opacity: 1;
+  animation: flickerRed 1s ease forwards;
+}
+
+@keyframes slideDownRed {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) translateX(5px) rotate(-90deg);
+    color: var(--light--burgundy--color);
+    filter: blur(5px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(4px) translateX(0) rotate(0);
+    filter: blur(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3px) translateX(0) rotate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+}
+
+@keyframes slideDownGreen {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) translateX(5px) rotate(-90deg);
+    color: var(--light--viridian--color);
+    filter: blur(5px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(4px) translateX(0) rotate(0);
+    filter: blur(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3px) translateX(0) rotate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+}
+
+@keyframes waveRed {
+  30% {
+    opacity: 1;
+    transform: translateY(4px) translateX(0) rotate(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3px) translateX(0) rotate(0);
+    color: var(--light--burgundy--color);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+}
+
+@keyframes waveGreen {
+  30% {
+    opacity: 1;
+    transform: translateY(4px) translateX(0) rotate(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3px) translateX(0) rotate(0);
+    color: var(--light--viridian--color);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+}
+
+@keyframes flickerRed {
+  0%, 9.99%, 39.99%, 59.99%, 79.99%, 99.99% {
+    opacity: 1;
+    background-color: var(--burgundy--color);
+    color: var(--white--color)
+  }
+  10%, 30%, 40%, 60%, 90% {
+    opacity: 0.3;
+  }
+  20%, 50%, 80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    background-color: var(--black--color);
+    color: var(--white--color)
+  }
+}
+
+@keyframes flickerGreen {
+  0%, 9.99%, 39.99%, 59.99%, 79.99%, 99.99% {
+    opacity: 1;
+    background-color: var(--medium--viridian--color);
+    color: var(--white--color)
+  }
+  10%, 30%, 40%, 60%, 90% {
+    opacity: 0.3;
+  }
+  20%, 50%, 80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    background-color: var(--black--color);
+    color: var(--white--color)
+  }
+}
+
+.ButtonText span {
+  --i: 0;
+  animation-delay: calc(var(--i) * 0.03s);
+}
+
+@media screen and (min-width: 992px) {
+  .PersonalInfo {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .ContactForm {
+    width: 60% ;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ContactForm {
+    width: 80% ;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .ContactForm {
+    width: 100% ;
+  }
+
+  .MessageBox {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .ContactForm .InputBox, .ContactForm .SelectBox {
+    font-size: 1.4rem;
+  }
+
+  .Button {
+    width: 5rem;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+
+  .Button .ButtonIcon {
+    margin-right: 0;
+  }
+
+  .Button .ButtonText {
+    display: none;
+  }
+}

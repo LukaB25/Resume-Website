@@ -14,7 +14,7 @@ export const SkillsProvider = ({ children }) => {
   useEffect(() => {
     const fetchTechnicalSkillsData = async () => {
       try {
-        const { data } = await axios.get('http://localhost:8000/api/technical-skill/');
+        const { data } = await axios.get('https://8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net/api/technical-skill/');
         setTechnicalSkills(data);
       } catch (error) {
         console.log(error)
@@ -22,7 +22,7 @@ export const SkillsProvider = ({ children }) => {
     }
     const fetchGeneralSkillsData = async () => {
       try {
-        const { data } = await axios.get('http://localhost:8000/api/general-skill/');
+        const { data } = await axios.get('https://8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net/api/general-skill/');
         setGeneralSkills(data);
       } catch (error) {
         console.log(error)
