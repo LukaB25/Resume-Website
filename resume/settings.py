@@ -94,6 +94,7 @@ CORS_ALLOWED_ORIGINS = [
     'https://8080-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net',
     'http://127.0.0.1:8000',
     'https://lblack-resume-ff87d1364db0.herokuapp.com',
+    os.environ.get('CLIENT_ORIGIN'),
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -103,6 +104,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://8080-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net',
     'http://127.0.0.1:8000',
     'https://lblack-resume-ff87d1364db0.herokuapp.com',
+    os.environ.get('CLIENT_ORIGIN'),
 ]
 
 ROOT_URLCONF = 'resume.urls'
