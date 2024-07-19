@@ -43,6 +43,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net',
     '.lukablack.tech',
+    '.lukablack.software',
+    '.lukablack.engineer'
 ]
 
 
