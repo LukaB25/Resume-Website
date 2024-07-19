@@ -58,7 +58,7 @@ function ContactForm() {
         subject: formData?.subject,
         message: formData?.message,
       });
-      await axios.post('https://hooks.zapier.com/hooks/catch/19352901/23mq8rv/',
+      await axios.post('https://hooks.zapier.com/hooks/catch/16592725/22f0edl/',
         new URLSearchParams({
           name: formData.name,
           email: formData.email,

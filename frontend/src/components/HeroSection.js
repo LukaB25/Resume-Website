@@ -11,10 +11,10 @@ import Button from 'react-bootstrap/Button';
 import { usePersonalInfo } from '../contexts/PersonalInfoContext';
 
 import styles from '../styles/HeroSection.module.css';
+import appStyles from '../App.module.css'
 
 function HeroSection() {
   const personalInfo = usePersonalInfo().data?.[0];
-  // console.log(personalInfo)
   return (
     <div>
       <Row className={styles.HeroSmallScreen} xs={1} md={2}>
@@ -40,7 +40,7 @@ function HeroSection() {
           </Container>
         </Col>
         <Col xs={{ order: 1 }} md={{ order: 2 }}>
-          <Container className={styles.HeroImageContainer}>
+          <Container className={`${styles.HeroImageContainer} ${appStyles.ContentContainer}`}>
             <img
               src={personalInfo?.image}
               alt="Luka Black"

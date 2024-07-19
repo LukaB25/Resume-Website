@@ -42,6 +42,7 @@ ALLOWED_HOSTS = [
     '.herokuapp.com',
     '127.0.0.1',
     '8000-lukab25-resumewebsite-qp04gn2ibi2.ws.codeinstitute-ide.net',
+    '.lukablack.tech',
 ]
 
 
@@ -175,7 +176,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'staticfiles/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 WHITENOISE_ROOT = BASE_DIR / 'staticfiles' / 'build'
 
